@@ -14,6 +14,7 @@ public class LoanDataKafkaSpout {
     /**
      * Creates the Loan Data Kafka spout for reading the raw loan data records from the kafka Broker
      * Converts the Kafka ConsumerRecord to a Tuple (Offset, Loan Record Key, Loan Record Value)
+     *
      * @param kafkaBrokerEndpoint
      * @param rawLoanDataInputTopic
      * @return

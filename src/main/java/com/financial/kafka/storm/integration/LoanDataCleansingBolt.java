@@ -26,6 +26,7 @@ public class LoanDataCleansingBolt extends BaseRichBolt {
     /**
      * Scrubs the raw loan data record received as a Tuple by either dropping the invalid records or reformatting the record based on the RegEx pattern
      * Emits the cleansed Tuple (Loan Record Key, Loan Record Value)
+     *
      * @param loanRecordTuple
      */
     @Override

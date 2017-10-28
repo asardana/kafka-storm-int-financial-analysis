@@ -21,7 +21,7 @@ public class LoanDataCleansingStormMain {
             cleansedLoanDataOutputTopic = args[2];
         }
 
-       // Create the Loan Data Cleansing Topology and run the Topology
+        // Create the Loan Data Cleansing Topology and run the Topology
         LoanDataCleansingTopology.createAndRunLoanDataCleansingTopology(kafkaBrokerEndpoint, rawLoanDataInputTopic, cleansedLoanDataOutputTopic);
     }
 

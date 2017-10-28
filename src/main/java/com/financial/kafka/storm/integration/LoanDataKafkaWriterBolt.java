@@ -1,7 +1,6 @@
 package com.financial.kafka.storm.integration;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.storm.kafka.bolt.KafkaBolt;
 import org.apache.storm.kafka.bolt.mapper.FieldNameBasedTupleToKafkaMapper;
@@ -18,6 +17,7 @@ public class LoanDataKafkaWriterBolt {
      * Creates the Bolt for writing the cleansed loan data records back to the the Kafka broker.
      * Creates the Bolt for writing the cleansed loan data records back to the the Kafka broker.
      * Maps the Tuple fields to the key-value pair in a Kafka ProducerRecord
+     *
      * @param kafkaBrokerEndpoint
      * @param cleansedLoanDataOutputTopic
      * @return
