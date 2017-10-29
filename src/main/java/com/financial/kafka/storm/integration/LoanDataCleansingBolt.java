@@ -39,12 +39,12 @@ public class LoanDataCleansingBolt extends BaseRichBolt {
 
             // Few records have emp_title with comma separated values resulting in records getting rejected.
             String scrubbedLoanRecord = loanRecord.replace(", ", "|").replaceAll("[a-z],", "");
-            collector.emit(loanRecordTuple, new Values(loanRecordTuple.getString(0), scrubbedLoanRecord));
+            collector.emit(loanRecordTuple, new Values(loanRecordTuple.getString(1), scrubbedLoanRecord));
             collector.ack(loanRecordTuple);
 
         } else {
 
-            System.out.println("Invalid Loan Record dropped at offset --> " + loanRecordTuple.getString(1) + " | " + loanRecordTuple.getString(2));
+            System.out.println("Invalid Loan Record dropped at offset --> " + loanRecordTuple.getLong(0) + " | " + loanRecordTuple.getString(2));
             collector.ack(loanRecordTuple);
         }
 

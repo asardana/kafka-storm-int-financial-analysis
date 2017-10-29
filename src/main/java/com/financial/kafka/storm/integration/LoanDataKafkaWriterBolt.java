@@ -15,7 +15,6 @@ public class LoanDataKafkaWriterBolt {
 
     /**
      * Creates the Bolt for writing the cleansed loan data records back to the the Kafka broker.
-     * Creates the Bolt for writing the cleansed loan data records back to the the Kafka broker.
      * Maps the Tuple fields to the key-value pair in a Kafka ProducerRecord
      *
      * @param kafkaBrokerEndpoint
